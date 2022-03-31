@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 import tech.erudo.mc.dottech.event.EventManager;
 import tech.erudo.mc.dottech.event.PlayerKeyInputEvent;
+import tech.erudo.mc.dottech.features.command.CommandManager;
 import tech.erudo.mc.dottech.features.module.ModuleManager;
 import tech.erudo.mc.dottech.features.ui.Hud;
 
@@ -25,6 +26,8 @@ public class DotTech
     public static final ModuleManager module = new ModuleManager();
 
     public Hud hud = new Hud();
+
+    public CommandManager command = new CommandManager();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -44,6 +47,7 @@ public class DotTech
         //set Events
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(hud);
+        MinecraftForge.EVENT_BUS.register(command);
 
         new EventManager();
     }

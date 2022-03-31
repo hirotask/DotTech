@@ -12,7 +12,6 @@ import tech.erudo.mc.dottech.features.module.Module;
 import java.awt.*;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Random;
 
 public class Hud extends GuiScreen {
     Minecraft mc = Minecraft.getMinecraft();
@@ -23,7 +22,7 @@ public class Hud extends GuiScreen {
         FontRenderer renderer = mc.fontRenderer;
 
         if (e.getType() == RenderGameOverlayEvent.ElementType.TEXT) {
-            renderer.drawString(DotTech.NAME + " " + DotTech.VERSION, 1, 1, Color.CYAN.getRGB());
+            renderer.drawString( ".TEch " + DotTech.VERSION, 1, 1, Color.CYAN.getRGB());
         }
         //array list
         if (e.getType() == RenderGameOverlayEvent.ElementType.TEXT) {
