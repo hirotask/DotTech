@@ -22,7 +22,7 @@ public class Module {
         Random rand = new Random();
         float h = rand.nextFloat();
         float s = rand.nextFloat();
-        float b = 1F;
+        float b = Math.max(0.5F,rand.nextFloat());
         color = Color.getHSBColor(h,s,b);
     }
 

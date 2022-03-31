@@ -1,6 +1,8 @@
 package tech.erudo.mc.dottech.features.module;
 
+import tech.erudo.mc.dottech.features.module.modules.movement.Spider;
 import tech.erudo.mc.dottech.features.module.modules.movement.Sprint;
+import tech.erudo.mc.dottech.features.module.modules.player.FastPlace;
 import tech.erudo.mc.dottech.features.module.modules.player.MyFirstModule;
 import tech.erudo.mc.dottech.features.module.modules.player.NoFall;
 import tech.erudo.mc.dottech.features.module.modules.world.FullBright;
@@ -16,6 +18,8 @@ public class ModuleManager {
         modules.push(new Sprint());
         modules.push(new NoFall());
         modules.push(new FullBright());
+        modules.push(new FastPlace());
+        modules.push(new Spider());
     }
 
 }

@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import org.lwjgl.input.Keyboard;
 import tech.erudo.mc.dottech.features.command.commands.Bind;
+import tech.erudo.mc.dottech.features.command.commands.GameMode;
 import tech.erudo.mc.dottech.features.command.commands.Toggle;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class CommandManager {
     public CommandManager() {
         commands.add(new Toggle());
         commands.add(new Bind());
+        commands.add(new GameMode());
     }
 
     @SubscribeEvent
