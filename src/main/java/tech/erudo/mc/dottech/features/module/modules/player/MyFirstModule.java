@@ -1,4 +1,4 @@
-package tech.erudo.mc.dottech.features.module.modules;
+package tech.erudo.mc.dottech.features.module.modules.player;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;

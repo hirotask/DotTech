@@ -8,8 +8,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
+import tech.erudo.mc.dottech.event.EventManager;
 import tech.erudo.mc.dottech.event.PlayerKeyInputEvent;
 import tech.erudo.mc.dottech.features.module.ModuleManager;
+import tech.erudo.mc.dottech.features.ui.Hud;
 
 @Mod(modid = DotTech.MODID, name = DotTech.NAME, version = DotTech.VERSION)
 public class DotTech
@@ -20,8 +22,9 @@ public class DotTech
 
     private static Logger logger;
 
-    public static ModuleManager module = new ModuleManager();
-    public PlayerKeyInputEvent playerKeyInputEvent = new PlayerKeyInputEvent();
+    public static final ModuleManager module = new ModuleManager();
+
+    public Hud hud = new Hud();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -38,8 +41,10 @@ public class DotTech
         //set Title
         Display.setTitle(DotTech.NAME + " " + DotTech.VERSION);
 
-        //setEvents
+        //set Events
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(playerKeyInputEvent);
+        MinecraftForge.EVENT_BUS.register(hud);
+
+        new EventManager();
     }
 }

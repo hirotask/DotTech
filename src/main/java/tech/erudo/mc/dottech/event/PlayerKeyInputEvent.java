@@ -7,6 +7,7 @@ import org.lwjgl.input.Keyboard;
 import tech.erudo.mc.dottech.DotTech;
 import tech.erudo.mc.dottech.features.module.Module;
 
+//プレイヤーがキー入力した時
 public class PlayerKeyInputEvent {
 
     @SubscribeEvent
