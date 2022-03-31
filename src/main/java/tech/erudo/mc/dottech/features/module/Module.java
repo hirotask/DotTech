@@ -22,7 +22,7 @@ public class Module {
         Random rand = new Random();
         float h = rand.nextFloat();
         float s = rand.nextFloat();
-        float b = rand.nextFloat();
+        float b = 1F;
         color = Color.getHSBColor(h,s,b);
     }
 
@@ -52,11 +52,11 @@ public class Module {
     public void onDisable() {}
     public void onUpdate() {}
 
-    public String getName() {
+    public final String getName() {
         return this.name;
     }
 
-    public int getNameLength(){
+    public final int getNameLength(){
         return this.name.length();
     }
 }
